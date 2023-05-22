@@ -13,7 +13,7 @@ const Product: NextPage<Props> = ({ data, link }) => {
   return (
     <div
       className="px-3 py-4 w-full max-w-[250px] shadow-lg bg-white rounded-lg cursor-pointer hover:scale-[1.1] duration-75 relative"
-      onClick={() => link && router.push(link)}
+      onClick={() => (link ? router.push(link) : null)}
     >
       <div className="absolute text-xs text-primary bg-bagde py-1 px-2 font-medium right-3">
         <span>-{data.discountPercentage}%</span>
